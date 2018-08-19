@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#B9B9B9"
+    tools:context=".MainActivity"
+    tools:ignore="MissingPrefix"
+    android:id="@+id/mainActivityHolder">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar"
+        android:elevation="2dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher"
+                android:id="@+id/icon" />
+            <!--<TextView-->
+                <!--android:maxLines="1"-->
+                <!--android:layout_toLeftOf="@+id/aviToolbar"-->
+                <!--android:layout_toRightOf="@+id/icon"-->
+                <!--android:gravity="center_vertical"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:textSize="23sp"-->
+                <!--android:textStyle="bold"-->
+                <!--android:text="Yify Torrent Directory"-->
+                <!--android:textColor="@android:color/white"-->
+                <!--fontPath="fonts/SulphurPoint-Bold.otf"/>-->
+            <android.support.v7.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_height="120dp"
+                android:layout_toLeftOf="@+id/aviToolbar"
+                android:layout_toRightOf="@+id/icon"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="2dp"></android.support.v7.widget.SearchView>
+            <com.wang.avi.AVLoadingIndicatorView
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/aviToolbar"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:indicatorName="BallGridPulseIndicator"
+                app:indicatorColor="@color/colorPrimaryDark"
+                />
+        </RelativeLayout>
+
+
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.v7.widget.RecyclerView
+        android:visibility="gone"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView">
+
+    </android.support.v7.widget.RecyclerView>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:indicatorName="BallGridPulseIndicator"
+        app:indicatorColor="@color/colorPrimaryDark"
+
+        />
+</RelativeLayout>

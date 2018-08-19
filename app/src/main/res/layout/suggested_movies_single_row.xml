@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="150dp"
+    android:layout_height="180dp"
+    tools:ignore="MissingPrefix">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:id="@+id/suggestedMovieImage"/>
+    <TextView
+        android:textAlignment="center"
+        android:id="@+id/suggestedMovieTitle"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        fontPath="fonts/SulphurPoint-Bold.otf"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:maxLines="1"/>
+</LinearLayout>
